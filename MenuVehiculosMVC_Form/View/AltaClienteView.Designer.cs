@@ -1,6 +1,6 @@
 ﻿namespace MenuVehiculosMVC_Form.View
 {
-    partial class AltaClienteView
+    partial class lbaltaClienteCompletada
     {
         /// <summary>
         /// Required designer variable.
@@ -130,6 +130,7 @@
             this.lbMensaje.Size = new System.Drawing.Size(168, 26);
             this.lbMensaje.TabIndex = 8;
             this.lbMensaje.Text = "El cliente ya existe";
+            this.lbMensaje.Visible = false;
             this.lbMensaje.Click += new System.EventHandler(this.lbMensaje_Click);
             // 
             // lbaltaCliente
@@ -142,8 +143,9 @@
             this.lbaltaCliente.TabIndex = 9;
             this.lbaltaCliente.Text = "Alta cliente completada";
             this.lbaltaCliente.Visible = false;
+            this.lbaltaCliente.Click += new System.EventHandler(this.lbaltaCliente_Click); 
             // 
-            // AltaClienteView
+            // lbaltaClienteCompletada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,7 +160,7 @@
             this.Controls.Add(this.lbNombre);
             this.Controls.Add(this.lbNif);
             this.Controls.Add(this.lbAltaClientes);
-            this.Name = "AltaClienteView";
+            this.Name = "lbaltaClienteCompletada";
             this.Text = "AltaClienteView";
             this.ResumeLayout(false);
             this.PerformLayout();

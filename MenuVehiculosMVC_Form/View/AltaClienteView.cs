@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace MenuVehiculosMVC_Form.View
 {
-    public partial class AltaClienteView : Form
+    public partial class lbaltaClienteCompletada : Form
     {
         ClienteController clienteController;
 
-        public AltaClienteView(Object controlador)
+        public lbaltaClienteCompletada(Object controlador)
         {
             InitializeComponent();
             clienteController = (ClienteController)controlador;
@@ -36,11 +36,13 @@ namespace MenuVehiculosMVC_Form.View
             //box nif
             String nombre = "";
             this.lbMensaje.Visible = false;
+             
             nombre = clienteController.getNombre(this.textBox1.Text);
             if (!nombre.Equals(""))
             {
                 this.lbMensaje.Text = "El cliente ya existe: " + nombre;
                 this.lbMensaje.Visible = true;
+                
             }  
         }
 
@@ -57,18 +59,22 @@ namespace MenuVehiculosMVC_Form.View
         private void btAceptar_Click(object sender, EventArgs e)
         {
             Hashtable clienteHash = new Hashtable();
+            
 
             if (this.textBox1.Text != "" && this.textBox1.Text != "")
             {
+               
                 clienteHash.Add("Nif", this.textBox1.Text);
                 clienteHash.Add("Nombre", this.textBox2.Text);
-                clienteController.altaCliente(clienteHash); 
-                this.lbaltaCliente.Visible = true;  
+                clienteController.altaCliente(clienteHash);
+                this.lbaltaCliente.Text = "Alta cliente completada"; 
+                this.lbaltaCliente.Visible = true; 
             } 
             else
             {
                 this.lbMensaje.Text = "No hay datos";
-                this.lbMensaje.Visible = true; 
+                this.lbMensaje.Visible = true;
+                 
             } 
 
             borrarDatos();
@@ -89,11 +95,17 @@ namespace MenuVehiculosMVC_Form.View
             this.textBox1.Text = "";
             this.textBox2.Text = "";
             this.lbMensaje.Visible = false; 
+        
         } 
 
         private void lbMensaje_Click(object sender, EventArgs e)
         {
             //mensaje que muestra si existe cliente
+        }
+
+        private void lbaltaCliente_Click(object sender, EventArgs e)
+        {
+            // mensaje alta cliente completada  
         }
     }
 }

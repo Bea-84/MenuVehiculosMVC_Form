@@ -78,6 +78,8 @@ namespace MenuVehiculosMVC_Form.View
         {
             //boton aceptar coche
             Hashtable vehiculoHash=new Hashtable();
+           
+
             if (this.textBoxMatri.Text != "" && this.textBoxMatri.Text != "") 
             {
                 vehiculoHash.Add("Matricula", this.textBoxMatri.Text);
@@ -86,7 +88,9 @@ namespace MenuVehiculosMVC_Form.View
                 vehiculoHash.Add("Puertas",this.txPuertas.Text);
                 vehiculoHash.Add("Plazas", this.txPlazas.Text); 
                 vehiculoController.altaCoche(vehiculoHash);
+                this.lbaltaveh.Text = "Alta vehiculo completada";
                 this.lbaltaveh.Visible = true;
+                
             }
             else
             {
@@ -122,6 +126,8 @@ namespace MenuVehiculosMVC_Form.View
         {
             //aceptar moto
             Hashtable vehiculoHash=new Hashtable();
+            
+
             if (this.textBoxMatri.Text != "" && this.textBoxMatri.Text != "")
             {
                 vehiculoHash.Add("Matricula", this.textBoxMatri.Text);
@@ -129,7 +135,9 @@ namespace MenuVehiculosMVC_Form.View
                 vehiculoHash.Add("Modelo", this.textBox2.Text);
                 vehiculoHash.Add("cc",this.textBoxCC.Text); 
                 vehiculoController.altaMoto(vehiculoHash);
+                this.lbaltaveh.Text = "Alta vehiculo completada";
                 this.lbaltaveh.Visible = true;
+                
             }
             else
             {
@@ -165,6 +173,8 @@ namespace MenuVehiculosMVC_Form.View
         {
             //aceptar camion
             Hashtable vehiculoHash=new Hashtable();
+         
+
             if (this.textBoxMatri.Text != "" && this.textBoxMatri.Text != "")
             {
                 vehiculoHash.Add("Matricula", this.textBoxMatri.Text);
@@ -172,7 +182,9 @@ namespace MenuVehiculosMVC_Form.View
                 vehiculoHash.Add("Modelo", this.textBox2.Text);
                 vehiculoHash.Add("kg", this.textBoxKG.Text);
                 vehiculoController.altaCamion(vehiculoHash);
-                this.lbaltaveh.Visible = true; 
+                this.lbaltaveh.Text = "Alta vehiculo completada"; 
+                this.lbaltaveh.Visible = true;
+               
             }
             else
             {
@@ -216,7 +228,12 @@ namespace MenuVehiculosMVC_Form.View
             this.textBoxCC.Text = "";
             this.textBoxKG.Text = "";
             this.lbMensaje.Visible = false; 
+            
         }
 
+        private void lbaltaveh_Click(object sender, EventArgs e)
+        {
+            //mensaje alta vahiculo completada 
+        }
     }
 }

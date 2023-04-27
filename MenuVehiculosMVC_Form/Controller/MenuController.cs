@@ -25,7 +25,7 @@ namespace MenuVehiculosMVC_Form.Controller
         {
             ClienteController clienteController=new ClienteController(datos);
 
-            AltaClienteView clienteview = new AltaClienteView(clienteController);
+            lbaltaClienteCompletada clienteview = new lbaltaClienteCompletada(clienteController);
 
             clienteview.Show();
         }

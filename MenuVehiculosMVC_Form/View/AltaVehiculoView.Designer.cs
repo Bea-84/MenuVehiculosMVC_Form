@@ -135,6 +135,7 @@
             this.lbMensaje.Size = new System.Drawing.Size(205, 26);
             this.lbMensaje.TabIndex = 9;
             this.lbMensaje.Text = "Vehiculo no disponible";
+            this.lbMensaje.Visible = false;
             this.lbMensaje.Click += new System.EventHandler(this.lbMensaje_Click);
             // 
             // btCoche
@@ -427,6 +428,7 @@
             this.lbaltaveh.TabIndex = 25;
             this.lbaltaveh.Text = "Alta Vehiculo completada";
             this.lbaltaveh.Visible = false;
+            this.lbaltaveh.Click += new System.EventHandler(this.lbaltaveh_Click);
             // 
             // AltaVehiculoView
             // 
