@@ -63,6 +63,7 @@ namespace MenuVehiculosMVC_Form.View
                 clienteHash.Add("Nif", this.textBox1.Text);
                 clienteHash.Add("Nombre", this.textBox2.Text);
                 clienteController.altaCliente(clienteHash); 
+                this.lbaltaCliente.Visible = true;  
             } 
             else
             {
@@ -90,10 +91,9 @@ namespace MenuVehiculosMVC_Form.View
             this.lbMensaje.Visible = false; 
         } 
 
-        private void AltaClienteView_Load(object sender, EventArgs e)
+        private void lbMensaje_Click(object sender, EventArgs e)
         {
-            //Mensaje cliente ya existe
-            this.lbMensaje.Visible = false; 
-        } 
+            //mensaje que muestra si existe cliente
+        }
     }
 }

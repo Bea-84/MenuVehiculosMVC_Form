@@ -64,6 +64,7 @@
             this.textBoxKG = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.lbaltaveh = new System.Windows.Forms.Label();
             this.pnCoche.SuspendLayout();
             this.pnMoto.SuspendLayout();
             this.pnCamion.SuspendLayout();
@@ -128,10 +129,10 @@
             // lbMensaje
             // 
             this.lbMensaje.AutoSize = true;
-            this.lbMensaje.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensaje.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMensaje.Location = new System.Drawing.Point(39, 502);
             this.lbMensaje.Name = "lbMensaje";
-            this.lbMensaje.Size = new System.Drawing.Size(181, 23);
+            this.lbMensaje.Size = new System.Drawing.Size(205, 26);
             this.lbMensaje.TabIndex = 9;
             this.lbMensaje.Text = "Vehiculo no disponible";
             this.lbMensaje.Click += new System.EventHandler(this.lbMensaje_Click);
@@ -416,11 +417,23 @@
             this.label9.Text = "Seleccione tipo de vehículo que  necesitas alquilar pulsando en la imagen y relle" +
     "na los datos:";
             // 
+            // lbaltaveh
+            // 
+            this.lbaltaveh.AutoSize = true;
+            this.lbaltaveh.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaltaveh.Location = new System.Drawing.Point(43, 564);
+            this.lbaltaveh.Name = "lbaltaveh";
+            this.lbaltaveh.Size = new System.Drawing.Size(233, 26);
+            this.lbaltaveh.TabIndex = 25;
+            this.lbaltaveh.Text = "Alta Vehiculo completada";
+            this.lbaltaveh.Visible = false;
+            // 
             // AltaVehiculoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1224, 621);
+            this.Controls.Add(this.lbaltaveh);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pnCamion);
@@ -489,5 +502,6 @@
         private System.Windows.Forms.TextBox textBoxKG;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbaltaveh;
     }
 }

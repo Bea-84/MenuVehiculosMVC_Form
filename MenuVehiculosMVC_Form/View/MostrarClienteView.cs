@@ -30,7 +30,7 @@ namespace MenuVehiculosMVC_Form.View
         {
             //caja para mostrar clientes
             List<String> lista = clienteController.getlistaClientes();
-            this.listBox1.DataSource = lista;  
+              
         }
 
         private void lbBucarCliente_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace MenuVehiculosMVC_Form.View
             if (nombre.Equals(""))
             {
                 this.lbBuscarCliente.Text = "El cliente no existe";
-                this.listBox1.Items.Add(this.textBox1.Text);
+               
             }
             else
             {

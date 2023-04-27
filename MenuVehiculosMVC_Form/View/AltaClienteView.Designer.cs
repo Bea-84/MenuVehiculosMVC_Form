@@ -37,6 +37,7 @@
             this.btCancelar = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
             this.lbMensaje = new System.Windows.Forms.Label();
+            this.lbaltaCliente = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbAltaClientes
@@ -123,18 +124,31 @@
             // lbMensaje
             // 
             this.lbMensaje.AutoSize = true;
-            this.lbMensaje.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensaje.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMensaje.Location = new System.Drawing.Point(45, 372);
             this.lbMensaje.Name = "lbMensaje";
             this.lbMensaje.Size = new System.Drawing.Size(168, 26);
             this.lbMensaje.TabIndex = 8;
             this.lbMensaje.Text = "El cliente ya existe";
+            this.lbMensaje.Click += new System.EventHandler(this.lbMensaje_Click);
+            // 
+            // lbaltaCliente
+            // 
+            this.lbaltaCliente.AutoSize = true;
+            this.lbaltaCliente.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbaltaCliente.Location = new System.Drawing.Point(518, 372);
+            this.lbaltaCliente.Name = "lbaltaCliente";
+            this.lbaltaCliente.Size = new System.Drawing.Size(217, 26);
+            this.lbaltaCliente.TabIndex = 9;
+            this.lbaltaCliente.Text = "Alta cliente completada";
+            this.lbaltaCliente.Visible = false;
             // 
             // AltaClienteView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbaltaCliente);
             this.Controls.Add(this.lbMensaje);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btCancelar);
@@ -162,5 +176,6 @@
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Button btSalir;
         private System.Windows.Forms.Label lbMensaje;
+        private System.Windows.Forms.Label lbaltaCliente;
     }
 }

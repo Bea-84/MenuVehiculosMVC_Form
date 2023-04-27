@@ -25,7 +25,7 @@ namespace MenuVehiculosMVC_Form.View
         {
             //list box vehiculos
             List<String> lista = vehiculoController.getlistaVehiculos(); 
-            this.listBoxVehiculos.DataSource = lista; 
+           
 
         }
 
@@ -41,7 +41,7 @@ namespace MenuVehiculosMVC_Form.View
             if (matricula.Equals(""))
             {
                 this.lbBuscarVehiculo.Text = "El vehiculo no existe"; 
-                this.listBoxVehiculos.Items.Add(this.textBoxmatricula.Text);
+                
             }
             else
             {

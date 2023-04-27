@@ -86,6 +86,7 @@ namespace MenuVehiculosMVC_Form.View
                 vehiculoHash.Add("Puertas",this.txPuertas.Text);
                 vehiculoHash.Add("Plazas", this.txPlazas.Text); 
                 vehiculoController.altaCoche(vehiculoHash);
+                this.lbaltaveh.Visible = true;
             }
             else
             {
@@ -127,7 +128,8 @@ namespace MenuVehiculosMVC_Form.View
                 vehiculoHash.Add("Marca", this.textBox1.Text);
                 vehiculoHash.Add("Modelo", this.textBox2.Text);
                 vehiculoHash.Add("cc",this.textBoxCC.Text); 
-                vehiculoController.altaMoto(vehiculoHash); 
+                vehiculoController.altaMoto(vehiculoHash);
+                this.lbaltaveh.Visible = true;
             }
             else
             {
@@ -169,7 +171,8 @@ namespace MenuVehiculosMVC_Form.View
                 vehiculoHash.Add("Marca", this.textBox1.Text);
                 vehiculoHash.Add("Modelo", this.textBox2.Text);
                 vehiculoHash.Add("kg", this.textBoxKG.Text);
-                vehiculoController.altaCamion(vehiculoHash); 
+                vehiculoController.altaCamion(vehiculoHash);
+                this.lbaltaveh.Visible = true; 
             }
             else
             {

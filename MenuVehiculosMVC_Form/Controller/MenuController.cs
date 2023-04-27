@@ -17,7 +17,7 @@ namespace MenuVehiculosMVC_Form.Controller
         public MenuController(Datos pDatos)
         {
             datos = pDatos; 
-        }
+        } 
 
         //métodos menú
 
